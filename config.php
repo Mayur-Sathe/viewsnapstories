@@ -1,5 +1,5 @@
 <?php
-define('SITE_URL', 'http://viewsnapstories.great-site.net');
+define('SITE_URL', 'https://viewsnapstories.onrender.com');
 define('SITE_NAME', 'View Snapchat Stories');
 define('SITE_TAGLINE', 'View Snapchat stories anonymously');
 define('AD_CLIENT', 'ca-pub-3502174797302362');
