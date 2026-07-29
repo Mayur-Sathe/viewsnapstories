@@ -65,5 +65,6 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="/assets/js/custom.js?v=<?= SITE_VERSION ?>" defer></script>
     <script src="https://pl30587796.effectivecpmnetwork.com/d4/66/76/d46676a3db322a1615dcfd78193ce4d0.js"></script>
+    <script src="https://pl30587819.effectivecpmnetwork.com/77/bc/6a/77bc6a5f05c30f8c41c831609539ea99.js"></script>
 </body>
 </html>
