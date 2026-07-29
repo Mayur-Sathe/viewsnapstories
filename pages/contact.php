@@ -49,7 +49,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
     btn.disabled = true;
     btn.textContent = 'Sending...';
     try {
-        const resp = await fetch('/api/contact', {
+        const resp = await fetch('/x/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

@@ -1,5 +1,7 @@
 data/cache/*
 logs/*
 !logs/.gitkeep
+api/*
+!api/.gitkeep
 .env
 *.local.php

@@ -57,34 +57,34 @@ function json_response($data, $code = 200) {
 }
 
 // API routes
-if (strpos($uri, '/api/') === 0) {
+if (strpos($uri, '/x/') === 0) {
     header('Content-Type: application/json');
-    if ($method === 'POST' && $uri === '/api/snapchat/fetch-stories') {
-        require __DIR__ . '/api/snapchat.php';
+    if ($method === 'POST' && $uri === '/x/snapchat/fetch-stories') {
+        require __DIR__ . '/x/snapchat.php';
         handle_fetch_stories();
     }
-    if ($method === 'POST' && $uri === '/api/snapchat/fetch-profile') {
-        require __DIR__ . '/api/snapchat.php';
+    if ($method === 'POST' && $uri === '/x/snapchat/fetch-profile') {
+        require __DIR__ . '/x/snapchat.php';
         handle_fetch_profile();
     }
-    if ($method === 'POST' && $uri === '/api/snapchat/search-users') {
-        require __DIR__ . '/api/snapchat.php';
+    if ($method === 'POST' && $uri === '/x/snapchat/search-users') {
+        require __DIR__ . '/x/snapchat.php';
         handle_search_users();
     }
-    if ($method === 'POST' && $uri === '/api/snapchat/download') {
-        require __DIR__ . '/api/snapchat.php';
+    if ($method === 'POST' && $uri === '/x/snapchat/download') {
+        require __DIR__ . '/x/snapchat.php';
         handle_download();
     }
-    if ($method === 'POST' && $uri === '/api/snapchat/followers') {
-        require __DIR__ . '/api/snapchat.php';
+    if ($method === 'POST' && $uri === '/x/snapchat/followers') {
+        require __DIR__ . '/x/snapchat.php';
         handle_followers();
     }
-    if ($uri === '/api/status/snapchat') {
-        require __DIR__ . '/api/status.php';
+    if ($uri === '/x/status/snapchat') {
+        require __DIR__ . '/x/status.php';
         handle_status_check();
     }
-    if ($method === 'POST' && $uri === '/api/contact') {
-        require __DIR__ . '/api/contact.php';
+    if ($method === 'POST' && $uri === '/x/contact') {
+        require __DIR__ . '/x/contact.php';
         handle_contact();
     }
     json_response(['success' => false, 'error' => 'Not found'], 404);

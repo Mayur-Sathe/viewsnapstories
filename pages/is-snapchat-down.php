@@ -28,7 +28,7 @@ async function checkStatus() {
     text.textContent = 'Checking...';
     detail.textContent = 'Running a quick check on Snapchat\'s server...';
     try {
-        const resp = await fetch('/api/status/snapchat');
+        const resp = await fetch('/x/status/snapchat');
         const data = await resp.json();
         if (data.success) {
             if (data.status === 'online') {
