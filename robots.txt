@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://viewsnapstories.great-site.net/sitemap

@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Force HTTPS (uncomment after enabling SSL in InfinityFree panel)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Serve existing files directly
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Route everything else through index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
