@@ -108,6 +108,12 @@ if ($method === 'POST' && $uri === '/') {
     render('home');
 }
 
+// Sitemap (raw XML, no header/footer)
+if ($uri === '/sitemap') {
+    require __DIR__ . '/../pages/sitemap.php';
+    exit;
+}
+
 // Page routes
 $routes = [
     '/'                         => 'home',
@@ -124,7 +130,6 @@ $routes = [
     '/contact'                     => 'contact',
     '/privacy-policy'              => 'privacy-policy',
     '/terms-of-service'            => 'terms-of-service',
-    '/sitemap'                     => 'sitemap',
 ];
 
 if (isset($routes[$uri])) {
