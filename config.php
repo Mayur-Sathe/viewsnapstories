@@ -2,7 +2,7 @@
 define('SITE_URL', 'https://viewsnapstories.onrender.com');
 define('SITE_NAME', 'View Snapchat Stories');
 define('SITE_TAGLINE', 'View Snapchat stories anonymously');
-define('AD_CLIENT', 'ca-pub-3502174797302362');
+define('AD_CLIENT', 'ca-pub-9531077997187448');
 define('GA_MEASUREMENT_ID', 'G-MMT1FWBMR3');
 define('KO_FI_URL', 'https://ko-fi.com/A0A21UNUTF');
 define('CONTACT_EMAIL', 'contact@viewsnapstories.com');

@@ -7,6 +7,7 @@
     <meta name="description" content="<?= get_page_description($page_desc ?? null) ?>">
     <meta name="keywords" content="<?= e($page_keywords ?? 'snapchat story viewer, snapchat anonymous viewer, snap viewer, snapchat anonymous, snapchat story anonymous, download snapchat stories') ?>">
     <meta name="google-site-verification" content="vqGDgqIr7cyMteuwXCJN8qUfvFWzBcHipp2nDIe9hoU" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9531077997187448" crossorigin="anonymous"></script>
     <link rel="canonical" href="<?= get_canonical($canonical ?? '/') ?>">
     <link rel="alternate" href="https://viewsnapstories.com" hreflang="en">
     <link rel="alternate" href="<?= SITE_URL ?>" hreflang="x-default">
