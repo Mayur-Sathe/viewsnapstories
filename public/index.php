@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/config.php';
-require_once __DIR__ . '/inc/bootstrap.php';
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../inc/bootstrap.php';
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = rtrim($uri, '/');
@@ -43,9 +43,9 @@ function render($page, $data = []) {
             $breadcrumbs = [['Home', '/'], [$label]];
         }
     }
-    require __DIR__ . '/inc/header.php';
-    require __DIR__ . "/pages/$page.php";
-    require __DIR__ . '/inc/footer.php';
+    require __DIR__ . '/../inc/header.php';
+    require __DIR__ . "/../pages/$page.php";
+    require __DIR__ . '/../inc/footer.php';
     exit;
 }
 
@@ -60,31 +60,31 @@ function json_response($data, $code = 200) {
 if (strpos($uri, '/x/') === 0) {
     header('Content-Type: application/json');
     if ($method === 'POST' && $uri === '/x/snapchat/fetch-stories') {
-        require __DIR__ . '/x/snapchat.php';
+        require __DIR__ . '/../x/snapchat.php';
         handle_fetch_stories();
     }
     if ($method === 'POST' && $uri === '/x/snapchat/fetch-profile') {
-        require __DIR__ . '/x/snapchat.php';
+        require __DIR__ . '/../x/snapchat.php';
         handle_fetch_profile();
     }
     if ($method === 'POST' && $uri === '/x/snapchat/search-users') {
-        require __DIR__ . '/x/snapchat.php';
+        require __DIR__ . '/../x/snapchat.php';
         handle_search_users();
     }
     if ($method === 'POST' && $uri === '/x/snapchat/download') {
-        require __DIR__ . '/x/snapchat.php';
+        require __DIR__ . '/../x/snapchat.php';
         handle_download();
     }
     if ($method === 'POST' && $uri === '/x/snapchat/followers') {
-        require __DIR__ . '/x/snapchat.php';
+        require __DIR__ . '/../x/snapchat.php';
         handle_followers();
     }
     if ($uri === '/x/status/snapchat') {
-        require __DIR__ . '/x/status.php';
+        require __DIR__ . '/../x/status.php';
         handle_status_check();
     }
     if ($method === 'POST' && $uri === '/x/contact') {
-        require __DIR__ . '/x/contact.php';
+        require __DIR__ . '/../x/contact.php';
         handle_contact();
     }
     json_response(['success' => false, 'error' => 'Not found'], 404);
@@ -152,7 +152,7 @@ if ($uri === '/blog' || $uri === '/blog/') {
 
 if (preg_match('#^/blog/(.+)$#', $uri, $m)) {
     $slug = $m[1];
-    $postsFile = __DIR__ . '/data/posts.json';
+    $postsFile = __DIR__ . '/../data/posts.json';
     $posts = file_exists($postsFile) ? (json_decode(file_get_contents($postsFile), true) ?? []) : [];
     $post = null;
     foreach ($posts as $p) {

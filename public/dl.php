@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/config.php';
-require_once __DIR__ . '/inc/bootstrap.php';
-require_once __DIR__ . '/lib/Http.php';
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../inc/bootstrap.php';
+require_once __DIR__ . '/../lib/Http.php';
 
 $url = $_GET['url'] ?? '';
 if (!filter_var($url, FILTER_VALIDATE_URL)) {
